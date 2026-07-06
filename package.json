@@ -1,0 +1,36 @@
+{
+  "name": "tiny-budget",
+  "version": "0.1.0",
+  "description": "Zero-dep runtime budget enforcement for AI agents. USD + token caps, crash-safe persistence.",
+  "main": "tiny_budget.js",
+  "bin": {
+    "tiny-budget": "./cli.js"
+  },
+  "files": [
+    "tiny_budget.js",
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test_tiny_budget.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "budget",
+    "cost",
+    "tokens",
+    "openai",
+    "anthropic",
+    "llm",
+    "rate-limit",
+    "cron"
+  ],
+  "author": "hussain-alsaibai",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
