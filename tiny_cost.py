@@ -91,9 +91,15 @@ class TokenBudget:
         with self._lock:
             if now > self._daily_start: self._daily_start = now; self._daily_total = 0.0
 
-    @property def total_cost(self): with self._lock: return self._total
-    @property def daily_cost(self): with self._lock: return self._daily_total
-    @property def call_count(self): with self._lock: return self._per_call_count
+    @property
+    def total_cost(self):
+        with self._lock: return self._total
+    @property
+    def daily_cost(self):
+        with self._lock: return self._daily_total
+    @property
+    def call_count(self):
+        with self._lock: return self._per_call_count
 
     def stats(self, since=None):
         s = {"calls": 0, "total_input_tokens": 0, "total_output_tokens": 0, "total_cost_usd": 0.0, "errors": 0}
