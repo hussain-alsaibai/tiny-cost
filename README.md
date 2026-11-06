@@ -134,14 +134,22 @@ It's also 280 lines including comments. You can read the whole thing.
 
 ## Tests
 
+Two suites, one per runtime:
+
 ```bash
-node test_tiny_budget.js
+node test_tiny_budget.js   # 16 passed
+python3 -m pytest -q       # 18 passed
 ```
 
-16 tests cover: pricing math, USD + token limits, persistence + reload,
-per-task isolation, OpenAI/Anthropic usage shapes, warning/charge callbacks,
-unknown model handling, custom pricing, flat charges, snapshot, reset, and
-`withBudget` wrapper.
+The JS suite (16) covers pricing math, USD + token limits, persistence +
+reload, per-task isolation, OpenAI/Anthropic usage shapes, warning/charge
+callbacks, unknown model handling, custom pricing, flat charges, snapshot,
+reset, and the `withBudget` wrapper. The Python suite (18) covers the same
+budget semantics on `tiny_cost.py`.
+
+Both counts are measured, not estimated: the README used to point at the JS
+suite only, which reads as though the Python module in the same directory has
+no tests at all.
 
 ## License
 
