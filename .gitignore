@@ -6,4 +6,11 @@ node_modules/
 coverage/
 .budget.json
 budget.json
-*.tmp
+*.tmp__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+.coverage
+htmlcov/
