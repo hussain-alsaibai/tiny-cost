@@ -6,7 +6,9 @@ node_modules/
 coverage/
 .budget.json
 budget.json
-*.tmp__pycache__/
+*.tmp
+
+__pycache__/
 *.py[cod]
 .pytest_cache/
 *.egg-info/
